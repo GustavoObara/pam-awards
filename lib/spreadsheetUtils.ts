@@ -3,7 +3,11 @@ import { google } from "googleapis";
 export type SheetRow = Record<string, string>;
 
 export async function fetchSpreadsheetData(range: string): Promise<string[][] | null> {
+
+    const credentials = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS ?? '');
+
     const auth = await google.auth.getClient({
+        credentials,
         scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'],
     });
 
