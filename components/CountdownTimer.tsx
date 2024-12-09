@@ -42,21 +42,21 @@ const CountdownTimer = ({ onComplete }: { onComplete: () => void }) => {
 
     return (
         <div className="text-center px-3 py-5">
-            <h3 className="text-2xl  font-bold mb-4 text-zinc-50 lg:text-5xl uppercase">Contagem Regressiva</h3>
-            <div className="flex justify-center space-x-4 text-lg font-medium">
-                <div className="mx-3 bg-pam-700 rounded min-w-24 h-20 lg:w-48 lg:h-48 flex flex-col justify-center items-center">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 text-zinc-50 md:text-5xl uppercase">Contagem Regressiva</h3>
+            <div className="flex justify-center space-x-2 md:space-x-4 text-lg font-medium">
+                <div className="bg-pam-700 rounded min-w-24 h-20 md:w-48 md:h-48 flex flex-col justify-center items-center">
                     <div className="text-3xl lg:text-5xl font-bold text-zinc-50">{timeLeft.days}</div>
                     <div className="text-white text-lg lg:text-3xl font-bold">Dias</div>
                 </div>
-                <div className="mx-3 bg-pam-700 rounded min-w-24 h-20 lg:w-48 lg:h-48 flex flex-col justify-center items-center">
+                <div className="bg-pam-700 rounded min-w-24 h-20 md:w-48 md:h-48 flex flex-col justify-center items-center">
                     <div className="text-3xl lg:text-5xl font-bold text-zinc-50">{timeLeft.hours}</div>
                     <div className="text-white text-lg lg:text-3xl font-bold">Horas</div>
                 </div>
-                <div className="mx-3 bg-pam-700 rounded min-w-24 h-20 lg:w-48 lg:h-48 flex flex-col justify-center items-center">
+                <div className="bg-pam-700 rounded min-w-24 h-20 md:w-48 md:h-48 flex flex-col justify-center items-center">
                     <div className="text-3xl lg:text-5xl font-bold text-zinc-50">{timeLeft.minutes}</div>
                     <div className="text-white text-lg lg:text-3xl font-bold">Minutos</div>
                 </div>
-                <div className="mx-3 bg-pam-700 rounded min-w-24 h-20 lg:w-48 lg:h-48 flex flex-col justify-center items-center">
+                <div className="bg-pam-700 rounded min-w-24 h-20 md:w-48 md:h-48 flex flex-col justify-center items-center">
                     <div className="text-3xl lg:text-5xl font-bold text-zinc-50">{timeLeft.seconds}</div>
                     <div className="text-white text-lg lg:text-3xl font-bold">Segundos</div>
                 </div>
