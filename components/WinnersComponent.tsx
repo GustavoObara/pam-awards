@@ -12,12 +12,12 @@ export default async function WinnersComponent() {
             <h3 className="text-2xl text-white font-bold uppercase mb-6 text-center">
                 Vencedores por Categoria
             </h3>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 justify-center">
+            <div className="grid grid-cols-1 xl:grid-cols-3 gap-10">
                 {Object.entries(winners).map(([category, winner]) => (
                     <CardWinner
-                    key={category}
-                    category={category}
-                    winner={winner}
+                        key={category}
+                        category={category}
+                        winner={winner}
                     />
                 ))}
             </div>

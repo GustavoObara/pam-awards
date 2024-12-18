@@ -35,17 +35,19 @@ export default function CardWinner({ category, winner }: CardWinnerProps) {
     const imagePath = winnerImages[winner];
 
     return (
-        <div className="w-full h-100 bg-white rounded-lg shadow-md flex flex-col items-center justify-center p-3 text-center">
-            <h3 className="text-lg font-bold text-gray-800 uppercase">{category.replace(/'/g, "")}</h3>
-            <div className="w-80 h-80 rounded bg-gray-200 overflow-hidden mt-2 mb-2">
-                <Image
-                    src={imagePath}
-                    alt={winner}
-                    priority
-                    className="object-cover w-full h-full rounded"
-                />
+        <div className="w-full flex justify-center">
+            <div className="w-80 md:w-96 bg-white rounded-lg shadow-md flex flex-col items-center justify-center p-3 text-center">
+                <h3 className="text-lg font-bold text-gray-800 uppercase">{category.replace(/'/g, "")}</h3>
+                <div className="w-64 h-64 md:w-80 md:h-80 rounded bg-gray-200 overflow-hidden mt-2 mb-2">
+                    <Image
+                        src={imagePath}
+                        alt={winner}
+                        priority
+                        className="object-cover w-full h-full rounded"
+                    />
+                </div>
+                <p className="text-gray-600 text-xl uppercase font-semibold">{winner}</p>
             </div>
-            <p className="text-gray-600 text-xl uppercase font-semibold">{winner}</p>
         </div>
     );
 }
